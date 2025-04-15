@@ -6,6 +6,8 @@ export const waitList = async (req, res) => {
   try {
     const { fullName, email, role, phone, location } = req.body;
 
+    const formattedRole = role.toLowerCase();
+
     const existingContact = await WaitList.findOne({ email });
     if (existingContact) {
       return res
@@ -16,7 +18,7 @@ export const waitList = async (req, res) => {
     const newWaitlistUser = new WaitList({
       fullName,
       email,
-      role,
+      role: formattedRole,
       phone,
       location,
     });
