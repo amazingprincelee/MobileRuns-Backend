@@ -30,6 +30,7 @@ const waitListSchema = new mongoose.Schema({
       "gmp_man",
       "solar installer",
       "solar_installer",
+      "solar_dealer",
       "dstv_&_gotv_installer",
       "cable_satellite_installer",
       "laborer",
