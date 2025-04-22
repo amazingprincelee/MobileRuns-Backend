@@ -19,8 +19,8 @@ const waitListSchema = new mongoose.Schema({
       "lawyer",
       "plumber",
       "electrician",
-      "waste collector",
-      "waste_collector",
+      "waste disposal",
+      "waste_disposal",
       "mason man",
       "mason_man",
       "iron bender",
@@ -39,6 +39,7 @@ const waitListSchema = new mongoose.Schema({
       "laborer",
       "mechanic",
       "welder",
+      "barber"
     ],
   },
   createdAt: { type: Date, default: Date.now },

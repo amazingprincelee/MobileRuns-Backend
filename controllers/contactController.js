@@ -6,6 +6,9 @@ export const waitList = async (req, res) => {
   try {
     const { fullName, email, role, phone, location } = req.body;
 
+    console.log(role);
+    
+
     const formattedRole = role.toLowerCase();
 
     const existingContact = await WaitList.findOne({ email });
