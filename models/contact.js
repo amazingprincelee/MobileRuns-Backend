@@ -39,7 +39,9 @@ const waitListSchema = new mongoose.Schema({
       "laborer",
       "mechanic",
       "welder",
-      "barber"
+      "barber",
+      "children tutor",
+      "children_tutor"
     ],
   },
   createdAt: { type: Date, default: Date.now },
