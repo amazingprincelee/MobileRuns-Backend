@@ -4,6 +4,7 @@ import { connect } from "./config/db.js";
 import dotenv from "dotenv";
 import contactRoute from "./routes/contactRoute.js";
 import authRoute from "./routes/authRoute.js";
+import userRoute from "./routes/userRoute.js";
 
 const app = express();
 dotenv.config();
@@ -41,6 +42,7 @@ connect();
 
 app.use("/api", contactRoute);
 app.use("/api", authRoute);
+app.use("/api", userRoute);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
