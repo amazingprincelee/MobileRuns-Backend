@@ -9,7 +9,9 @@ import userRoute from "./routes/userRoute.js";
 const app = express();
 dotenv.config();
 
-app.use(cors())
+app.use(cors({
+  origin: '*'
+}))
 
 // Define allowed origins
 // const allowedOrigins = [
