@@ -6,7 +6,7 @@ const route = express.Router();
 
 route.get("/", (req, res)=>{ res.json("Welcome to MobileRuns")})
 route.post("/register", authValidator, register);
-route.post("/login", login);
+route.post("/login", authValidator, login);
 
 
 
