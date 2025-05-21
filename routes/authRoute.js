@@ -1,18 +1,12 @@
-import express from 'express';
-import {login, register} from '../controllers/authController.js'
-import { authValidator } from '../middlewares/authValidator.js';
-const route = express.Router();
+import express from "express";
+import { login, verifyCode } from "../controllers/authController.js";
+import { googleAuth } from "../controllers/googleAuthController.js";
+const router = express.Router();
 
 
-route.get("/", (req, res)=>{ res.json("Welcome to MobileRuns")})
-route.post("/register", authValidator, register);
-route.post("/login", authValidator, login);
+router.post("/auth/login", login);
+router.post("/auth/verify-code",  verifyCode);
+router.post("/auth/google-auth", googleAuth);
 
 
-
-
-
-
-
-
-export default route
+export default router;

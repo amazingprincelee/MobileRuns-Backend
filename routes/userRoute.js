@@ -1,13 +1,13 @@
 import express from "express";
 import { updatePassword } from "../controllers/userController.js";
+
+
 const router = express.Router();
 
 
 
-
-
-router.put("/update-password/:userId", updatePassword)
-
+// Existing routes
+router.put("/update-password/:userId", updatePassword);
 
 export default router;
 

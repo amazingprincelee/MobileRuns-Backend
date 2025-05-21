@@ -1,5 +1,5 @@
 import WaitList from "../models/contact.js";
-import { sendWaitlistEmail } from "../utils/email.js";
+import { sendWaitlistEmail } from "../config/nodemailer.js";
 
 
 export const waitList = async (req, res) => {
